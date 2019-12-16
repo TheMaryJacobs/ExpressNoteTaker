@@ -34,7 +34,7 @@ var deleteNote = function(id) {
 
 // If there is an activeNote, display it, otherwise render empty inputs
 var renderActiveNote = function() {
-  $saveNoteBtn.hide();
+  // $saveNoteBtn.hide();
 
   if (activeNote.id) {
     $noteTitle.attr("readonly", true);
@@ -112,10 +112,12 @@ var renderNoteList = function(notes) {
   for (var i = 0; i < notes.length; i++) {
     var note = notes[i];
 
-    var $li = $("<li class='list-group-item'>").data(note);
+    var $li = $("<li class='list-group-item'id=${note.id}>`>").data(note);
     var $span = $("<span>").text(note.title);
+
+    //changed red trash cans to normal
     var $delBtn = $(
-      "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
+      "<i class='fas fa-trash-alt float-right delete-note'>"
     );
 
     $li.append($span, $delBtn);
