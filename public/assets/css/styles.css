@@ -57,7 +57,7 @@ h2{
   resize: none;
   height: calc(100% - 63px);
   padding-top: 15px;
-	width: auto;
+	width: 80%;
 	background-color: hsla(0,0%,100%,0.00);
 	color: #174e6d;
 }
