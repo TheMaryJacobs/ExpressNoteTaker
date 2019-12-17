@@ -64,11 +64,11 @@ h2{
 
 .note-title {
   height: 50px;
-  margin-top: 13px;
+  margin-top: 25px;
   font-size: 3rem;
 	width: auto;
 	background-color: hsla(0,0%,100%,0.00);
-	color: #174e6d !important;
+	color: #174e6d;
 }
 
 .note-title:read-only, .note-textarea:read-only {
@@ -76,7 +76,8 @@ h2{
 }
 
 .list-container .card {
-  height: calc(100vh - 70px);
+  /* height: calc(100vh - 70px); */
+  height: fit-content;
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
