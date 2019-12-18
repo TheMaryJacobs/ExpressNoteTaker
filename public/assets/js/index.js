@@ -63,11 +63,11 @@ const handleNoteSave = function() {
 };
 
 // Delete the clicked note
-const handleNoteDelete = function(event) {
+var handleNoteDelete = function(event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
   event.stopPropagation();
 
-  const note = $(this)
+  var note = $(this)
     .parent(".list-group-item")
     .data();
 
@@ -82,20 +82,20 @@ const handleNoteDelete = function(event) {
 };
 
 // Sets the activeNote and displays it
-const handleNoteView = function() {
+var handleNoteView = function() {
   activeNote = $(this).data();
   renderActiveNote();
 };
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
-const handleNewNoteView = function() {
+var handleNewNoteView = function() {
   activeNote = {};
   renderActiveNote();
 };
 
 // If a note's title or text are empty, hide the save button
 // Or else show it
-const handleRenderSaveBtn = function() {
+var handleRenderSaveBtn = function() {
   if (!$noteTitle.val().trim() || !$noteText.val().trim()) {
     $saveNoteBtn.hide();
   } else {
@@ -104,7 +104,7 @@ const handleRenderSaveBtn = function() {
 };
 
 // Render's the list of note titles
-const renderNoteList = function(notes) {
+var renderNoteList = function(notes) {
   $noteList.empty();
 
   const noteListItems = [];
