@@ -117,7 +117,7 @@ var renderNoteList = function(notes) {
 
     //changed red trash cans to normal
     const $delBtn = $(
-      "<i class='fas fa-trash-alt float-right delete-note'>"
+      `<i class='fas fa-trash-alt float-right delete-note'>`
     );
 
     $li.append($span, $delBtn);

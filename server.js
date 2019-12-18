@@ -14,17 +14,6 @@ app.use(express.json());
 // static thing we talked about in class
 app.use(express.static('public'));
 
-//Brian told me I don't need these but I'm afraid to delete them
-//Create routes for HTML
-    // * GET `/notes` -  `notes.html` file.
-    // app.get("/notes", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "public/assets/notes.html"));
-    // });
-    // * GET `*` -`index.html` file
-    // app.get("/", function(req, res) {
-    //     res.sendFile(path.join(__dirname, "public/assets/index.html"));
-    // });
-
 
 //REQUESTS: GET/POST/DELETE ===================================================>
 
@@ -33,7 +22,6 @@ app.use(express.static('public'));
     app.get("/", function (req, res) {
         res.sendFile(path.join(__dirname, "public/assets/index.html"));
     });
-
 
     //notes page
     app.get("/notes", function (req, res) {
@@ -85,7 +73,10 @@ app.post("/api/notes", function (req, res) {
 
 
 //DELETE function ================================>
+//THIS ISNT WORKING AND IM NOTE... NOT SURE WHY.
+
 app.delete("/api/notes/:id", function (req, res) {
+    res.send(req.body.id)
     // set variable to the ID of the note to delete
     const deletedId = (req.params.id);
     console.log(deletedId)

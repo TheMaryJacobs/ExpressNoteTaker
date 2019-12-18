@@ -7,29 +7,15 @@ For users that need to keep track of a lot of information, it's easy to forget o
 ## Links
 
 Live: 
-https://themaryjacobs.github.io/ExpressNoteTaker/
-
-Heroku - https://dashboard.heroku.com/apps/mj-express-note-taker/deploy/github
 https://mj-express-note-taker.herokuapp.com/
 
+Repository:
 https://github.com/TheMaryJacobs/ExpressNoteTaker
 
+## View it (Sort Of) Working
+![Express - Note Taker][link here]
 
-## Instructions
-* The application frontend has already been created, it's your job to build the backend and connect the two.
 
-* The following HTML routes should be created:
+## Challenges
+I had a hard time grasping a lot of the concepts of back end development with the short amount of time we have been working on them. Deploying to heroku and using express servers are much different than what we have been working on up until now, so switching up fundamentals like paths to other files was quite tricky. I also ran into issues when I converted the "var"s in the given index.js file to "consts" so I ended up changing many of them back in hopes that it would make all of the functionality return. 
 
- * GET `/notes` - Should return the `notes.html` file.
-
- * GET `*` - Should return the `index.html` file
-
-* The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
-
-* The following API routes should be created:
-
- * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
-
- * POST `/api/notes` - Should recieve a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
-
- * DELETE `/api/notes/:id` - Should recieve a query paramter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
