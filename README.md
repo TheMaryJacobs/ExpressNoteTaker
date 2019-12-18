@@ -13,7 +13,7 @@ Repository:
 https://github.com/TheMaryJacobs/ExpressNoteTaker
 
 ## View it (Sort Of) Working
-![Express - Note Taker][https://github.com/TheMaryJacobs/ExpressNoteTaker/blob/master/public/ExpressNoteTaker.gif]
+![Express - Note Taker](https://github.com/TheMaryJacobs/ExpressNoteTaker/blob/master/public/ExpressNoteTaker.gif)
 
 
 ## Challenges
